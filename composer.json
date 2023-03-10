@@ -1,0 +1,16 @@
+{
+    "name": "isaac/ccpm-clone",
+    "description": "CCPM clone to learn php basics",
+    "autoload": {
+        "psr-4": {
+            "Isaac\\CcpmClone\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Isaac Correia Gonçalves",
+            "email": "isaac.correia.2406@gmail.com"
+        }
+    ],
+    "require": {}
+}

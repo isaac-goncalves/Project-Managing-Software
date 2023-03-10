@@ -1,0 +1,11 @@
+SQL TO CREATE TABLES FOR THE DATABASE
+
+{
+
+CREATE TABLE dados (
+    id SERIAL PRIMARY KEY,
+    data DATE NOT NULL,
+    valor NUMERIC(10, 2) NOT NULL
+);
+
+}
