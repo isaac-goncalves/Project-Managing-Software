@@ -1,18 +1,24 @@
 
 <!-- this file connects to the database POSTGRES -->
 
-
 <?php
-
-// here goes the variables to connect to the database
-
-$dbhost = "localhost";
-$dbuser = "postgres";
-$dbpass = "2406";
-$dbname = "ccpmClone";
-
-// Connect to the PostgreSQL database
-$conn = pg_connect("host=$dbhost dbname=$dbname user=$dbuser password=$dbpass");
-
-
+function getConnection() {
+  
+    $host = "localhost";
+    $port = "5432";
+    $database = "ccpmClone";
+    $user = "postgres";
+    $password = "2406";
+    $dsn = "pgsql:host=$host;port=$port;dbname=$database;user=$user;password=$password";
+    $options = [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ];
+    try {
+        $pdo = new PDO($dsn, $user, $password, $options);
+        echo "Connected successfully";
+        return $pdo;
+    } catch (PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
+}
 ?>
