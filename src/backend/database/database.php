@@ -1,9 +1,10 @@
-
 <!-- this file connects to the database POSTGRES -->
 
 <?php
-function getConnection() {
-  
+
+function getConnection()
+{
+    echo "Connecting to database...";
     $host = "localhost";
     $port = "5432";
     $database = "ccpmClone";
@@ -21,4 +22,6 @@ function getConnection() {
         echo "Connection failed: " . $e->getMessage();
     }
 }
+// getConnection();
+
 ?>

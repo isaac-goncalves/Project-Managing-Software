@@ -1,5 +1,5 @@
+<!-- <?php phpinfo(); ?> -->
 <?php
-
 ?>
 <html>
 
@@ -18,7 +18,7 @@
 
     <!-- Addo line break bewteen stuffs -->
 
-    <form action="../backend/insert.php" method="post">
+    <form action="../src/backend/insert.php" method="post">
         <label for="name">Nome do projeto</label>
         <input type="text" name="name" id="name" required>
         <br>

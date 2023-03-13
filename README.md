@@ -9,3 +9,7 @@ CREATE TABLE dados (
 );
 
 }
+
+to see logs in real time
+
+tail -f C:/xampp-new/php/logs/php_error_log

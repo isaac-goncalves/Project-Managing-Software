@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="styles/navbarStyles.css">
 <nav>
   <ul>
     <li><a href="index.php">Home</a></li>

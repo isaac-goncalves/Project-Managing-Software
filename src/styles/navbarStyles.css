@@ -1,0 +1,31 @@
+nav {
+    background-color: #333; /* Set background color */
+    height: 50px; /* Set height */
+  }
+  
+  nav ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Set display to flex */
+    justify-content: space-between; /* Set horizontal alignment */
+    align-items: center; /* Set vertical alignment */
+    height: 100%; /* Set height to 100% */
+  }
+  
+  nav ul li {
+    height: 100%; /* Set height to 100% */
+  }
+  
+  nav ul li a {
+    display: block; /* Set display to block */
+    color: white; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0 20px; /* Add padding */
+    height: 100%; /* Set height to 100% */
+    line-height: 50px; /* Set line height to center text vertically */
+  }
+  
+  nav ul li a:hover {
+    background-color: #555; /* Set background color on hover */
+  }
