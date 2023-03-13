@@ -1,3 +1,3 @@
 <center>
-    <h1> CCPM - Clone </h1>
+    <h1 style="margin: 1rem;"> CCPM - Clone </h1>
 </center>
