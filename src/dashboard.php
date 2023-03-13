@@ -1,11 +1,22 @@
+<div class="loginStatusWrapper">
+    <?php
+    session_start();
+    if (isset($_SESSION['user'])) {
+        echo "<h1>Welcome, " . $_SESSION['user']['usersuid'] . "!</h1>";
+    } else {
+        echo "<h1>You are not logged in.</h1>";
+    }
+    ?>
+    <form action="backend/logout.php" method="post">
+        <button class='logoutButton' type="submit" name="logout-submit">Logout</button>
+    </form>
+</div>
 <?php require_once('header.php'); ?>
-
 <?php require_once('navbar.php'); ?>
-
-
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="styles/dashboardStyles.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -54,7 +65,9 @@
             ]);
 
             var options = {
-                height: 500
+                height: 1000,
+
+
             };
 
             var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
@@ -65,19 +78,11 @@
 </head>
 
 <body>
-    <div id="chart_div"></div>
-    <?php
-    session_start();
-    if (isset($_SESSION['user'])) {
-        echo "<h1>Welcome, " . $_SESSION['user']['usersuid'] . "!</h1>";
-    } else {
-        echo "<h1>You are not logged in.</h1>";
-    }
-    ?>
+    <div id="chartWrapper">
+        <h1>Dashboard</h1>
+        <div id="chart_div"></div>
+    </div>
     <!-- now a logout button -->
-    <form action="backend/logout.php" method="post">
-        <button type="submit" name="logout-submit">Logout</button>
-    </form>
 
 </body>
 

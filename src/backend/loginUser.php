@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     error_log("Code Ran", 0);
 
     if (emptyInputLogin($username, $password) !== true) {
-        header("location: ../login.php?error=emptyinput");
+        header("location: ../index.php?error=emptyinput");
         exit();
     }
 
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     Error_log("Error: " . print_r($user, true));
 
     if ($user == false) {
-        header("location: ../login.php?error=stmtfailed");
+        header("location: ../index.php?error=stmtfailed");
         error_log("Login Failed", 0);
         exit();
     }

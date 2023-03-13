@@ -1,5 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #fff;
+    background-color: #F4F4F4;
+    font-family: 'Lato', sans-serif;
+    margin: 0 auto;
 }
 
 .loginWrapper {
@@ -7,16 +13,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FFF;
+    width: 35rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 3rem;
+    gap: 3rem;
+    
 }
 
 h1 {
-    color: #00589B;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 form {
-    background-color: #0072C6;
     padding: 20px;
     border-radius: 5px;
     max-width: 500px;
@@ -25,6 +37,7 @@ form {
 
 input[type="text"],
 input[type="password"] {
+    background-color: #F4F4F4;
     border: none;
     border-radius: 3px;
     padding: 10px;
@@ -40,18 +53,21 @@ input[type="password"]:focus {
 }
 
 button[type="submit"] {
-    background-color: #fff;
+    width: 100%;
+    background-color: #3d729b;
     border: none;
-    color: #0072C6;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 3px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
 }
 
 button[type="submit"]:hover {
     background-color: #00589B;
-    color: #fff;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
 }
 
 p.error-message {

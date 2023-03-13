@@ -1,3 +1,9 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
 nav {
     background-color: #333; /* Set background color */
     height: 50px; /* Set height */
@@ -8,7 +14,7 @@ nav {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     display: flex; /* Set display to flex */
-    justify-content: space-between; /* Set horizontal alignment */
+    justify-content: space-around; /* Set horizontal alignment */
     align-items: center; /* Set vertical alignment */
     height: 100%; /* Set height to 100% */
   }
@@ -18,6 +24,7 @@ nav {
   }
   
   nav ul li a {
+    font-family: 'Lato', sans-serif;
     display: block; /* Set display to block */
     color: white; /* Set text color */
     text-decoration: none; /* Remove underline */
