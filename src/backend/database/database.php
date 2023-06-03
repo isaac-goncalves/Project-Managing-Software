@@ -1,10 +1,8 @@
-<!-- this file connects to the database POSTGRES -->
-
 <?php
 
 function getConnection()
 {
-    echo "Connecting to database...";
+    // echo "Connecting to database...";
     $host = "localhost";
     $port = "5432";
     $database = "ccpmClone";
@@ -16,10 +14,12 @@ function getConnection()
     ];
     try {
         $pdo = new PDO($dsn, $user, $password, $options);
-        echo "Connected successfully";
+        error_log('Connected to database');
+        // echo "Connected successfully";
         return $pdo;
     } catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+        error_log('Error on connecting to database');
+        // echo "Connection failed: " . $e->getMessage();
     }
 }
 // getConnection();

@@ -2,8 +2,8 @@
 
 include './database/database.php';
 
-function emptyInputLogin($username, $password) {
-    if(empty($username) || empty($password)) {
+function emptyInputLogin($email, $password) {
+    if(empty($email) || empty($password)) {
         $result = false;
     }
     else {
@@ -13,12 +13,12 @@ function emptyInputLogin($username, $password) {
 }
 
 
-function loginUser($username, $password) {
-    // error_log("função Login user: " . $username . "\n Password: " . $password);
+function loginUser($email, $password) {
+     error_log("função Login email: " . $email . "\n Password: " . $password);
     $pdo = getConnection();
-    $sql = "SELECT * FROM users WHERE usersUid = :username AND usersPwd = :password";
+    $sql = "SELECT * FROM users WHERE email = :email AND password = :password";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(['username' => $username, 'password' => $password]);
+    $stmt->execute(['email' => $email, 'password' => $password]);
 
     // Error_log("Error: " . $stmt->rowCount());
 

@@ -17,6 +17,7 @@
 
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <script  type="text/javascript" src="./task.js"></script>
     <link rel="stylesheet" href="styles/dashboardStyles.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -75,12 +76,25 @@
             chart.draw(data, options);
         }
     </script>
+
 </head>
 
 <body>
     <div id="chartWrapper">
-        <h1>Dashboard</h1>
-        <div id="chart_div"></div>
+        <h1>Projetos</h1>
+        <table id="projectTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Prioridade</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </div>
     <!-- now a logout button -->
 

@@ -25,8 +25,8 @@ if (isset($_GET['error'])) {
 <link rel="stylesheet" href="styles/loginStyles.css">
 <div class="loginWrapper">
     <h1> Login </h1>
-    <form action="/ccpmClone/src/backend/loginUser.php" method="post">
-        <input type="text" name="username" placeholder="Username">
+    <form action="/src/backend/loginUser.php" method="post">
+        <input type="text" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <button type="submit">Login</button>
         <form>

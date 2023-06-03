@@ -31,7 +31,7 @@ if (isset($_GET['message'])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="styles/registerStyles.css">
     <h1> Register </h1>
-    <form action="/ccpmClone/src/backend/registerUser.php" method="post">
+    <form action="/src/backend/registerUser.php" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="text" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">

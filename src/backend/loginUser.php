@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
     require_once('./functions/loginFunctions.php');
@@ -9,12 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     error_log("Code Ran", 0);
 
-    if (emptyInputLogin($username, $password) !== true) {
+    if (emptyInputLogin($email, $password) !== true) {
         header("location: ../index.php?error=emptyinput");
         exit();
     }
 
-    $user = loginUser($username, $password);
+    $user = loginUser($email, $password);
 
     Error_log("Error: " . print_r($user, true));
 

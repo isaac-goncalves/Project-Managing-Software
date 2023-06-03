@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("location: ../register.php?error=passwordsdontmatch");
         exit();
     }                                                           
-    if(uuidExist( $username) !== false) {
+    if(userExist( $email) !== false) {
         header("location: ../register.php?error=usernametaken");
         exit();
     }

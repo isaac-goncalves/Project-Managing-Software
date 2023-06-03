@@ -21,8 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 function insertToDatabase($name, $description, $start_date, $end_date, $status, $priority, $user_id) {
     $pdo = getConnection();
-    $sql = "INSERT INTO projects (name, description, start_date, end_date, status, priority, user_id) VALUES (:name, :description, :start_date, :end_date, :status, :priority, :user_id)";
+    $sql = "INSERT INTO projetos (name, description, start_date, end_date, status, priority, user_id) VALUES (:name, :description, :start_date, :end_date, :status, :priority, :user_id)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(['name' => $name, 'description' => $description, 'start_date' => $start_date, 'end_date' => $end_date, 'status' => $status, 'priority' => $priority, 'user_id' => $user_id]);
+    $stmt->execute([
+    'name' => $name,
+     'description' => $description, 
+     'start_date' => $start_date, 
+     'end_date' => $end_date, 
+     'status' => $status, 
+     'priority' => $priority, 
+     'user_id' => $user_id]);
 }
+
+
 ?>

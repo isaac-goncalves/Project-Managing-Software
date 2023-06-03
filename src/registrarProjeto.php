@@ -18,7 +18,7 @@
     <div class="loginWrapper">
         <h1>Insira um novo projeto</h1>
         <!-- Addo line break bewteen stuffs -->
-        <form action="../src/backend/insert.php" method="post">
+        <form action="../src/backend/createProject.php" method="post">
             <label class="projLabel" for="name">Nome do projeto</label>
             <input type="text" name="name" id="name" required>
             <br>
@@ -32,17 +32,21 @@
             <input type="date" name="end_date" id="end_date" required>
             <br>
             <label class="projLabel" for="status">Status</label>
-
             <input type="text" name="status" id="status" required>
             <br>
             <label class="projLabel" for="priority">Prioridade</label>
-            <input type="text" name="priority" id="priority" required>
+            <select name="priority" id="priority" required>
+                <option value="alto">Alto</option>
+                <option value="baixo">Baixo</option>
+                <option value="medio">Médio</option>
+                <option value="nao-se-aplica">Não se Aplica</option>
+            </select>
             <br>
             <label class="projLabel" for="user_id">ID do usuário</label>
             <input type="text" name="user_id" id="user_id" required>
             <br>
             <br>
-            <Button type="submit" value="Enviar"> Enviar </Button>  
+            <Button type="submit" value="Enviar"> Enviar </Button>
         </form>
     </div>
 
