@@ -22,7 +22,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    
+
     <script type="text/javascript" src="./task.js"></script>
     <!-- <link rel="stylesheet" href="styles/tasks.css"> -->
 
@@ -58,9 +58,11 @@
                     </thead>
                     <tbody></tbody>
                 </table>
+                <div>
+                    <button class='btn btn-primary' type="submit" name="logout-submit" onclick="window.location.href='/src/registrarProjeto.php'">Add project</button>
+                </div>
             </div>
-            
-            <!-- now a logout button -->
+            <!-- now button to add a new project -->
         </div>
     </div>
 </body>
@@ -250,5 +252,17 @@ ID	Task Name	Task Description	Project ID	Completed	Created At Create form with t
     </div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function openProject(button, projectId) {
+            console.log('RODEI isaac e carol! botao de open project');
+            var projectId = button.getAttribute("data-project-id");
+
+            // Use the parameters in your logic
+            console.log("Parameter 1: " + projectId);
+
+            // Redirect to the openProject page with the project ID in the URL
+            window.location.href = "/src/openProject.php?id=" + projectId;
+        }
+    </script>
 
 </html>

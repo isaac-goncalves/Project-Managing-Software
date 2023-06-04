@@ -1,5 +1,16 @@
 window.onload = function () {
 
+    function openProject(button, projectId) {
+        console.log('RODEI isaac e carol! botao de open project');
+        var projectId = button.getAttribute("data-project-id");
+        
+        // Use the parameters in your logic
+        console.log("Parameter 1: " + projectId);
+        
+        // Redirect to the openProject page with the project ID in the URL
+        window.location.href = "/openProject?id=" + projectId;
+      }
+
     function setEventListenerEditButton() {
 
         // setando event listener no botao de editar
@@ -102,7 +113,7 @@ window.onload = function () {
                         <td>${project.priority}</td>
                         <td>${project.status}</td>
                         <td>
-                            <button class=" btn btn-primary" data-toggle="modal" data-target="#myModal" ondblclick="openModal()" >OpenProject</button>
+                            <button class=" btn btn-primary"  data-project-id=${project.id} onclick="openProject(this, 'data-project-id')" >OpenProject</button>
                             <button class="edit-button btn btn-primary" data-project-id=${project.id}>Edit</button>
                             <button class="delete-button btn btn-danger" data-project-id=${project.id}>Delete</button>
                          </td>
