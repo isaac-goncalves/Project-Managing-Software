@@ -1,8 +1,8 @@
 <?php
 
-require_once('header.php');
 
-require_once('navbar.php');
+
+
 
 if (isset($_GET['error'])) {
     if ($_GET['error'] == "emptyinput") {
@@ -20,16 +20,32 @@ if (isset($_GET['error'])) {
 
 ?>
 
+<head>
+    <title> Login </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
 <html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
 <link rel="stylesheet" href="styles/loginStyles.css">
-<div class="loginWrapper">
-    <h1> Login </h1>
-    <form action="/src/backend/loginUser.php" method="post">
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Login</button>
-        <form>
-</div>
+
+<body>
+    <?php require_once('navbar.php'); ?>
+
+    <div class="container">
+        <div class="loginWrapper">
+            <h1 class="text-center">Login</h1>
+            <form action="/src/backend/loginUser.php" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </html>

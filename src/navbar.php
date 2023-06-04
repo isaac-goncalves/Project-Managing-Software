@@ -1,10 +1,31 @@
-<link rel="stylesheet" href="styles/navbarStyles.css">
-<nav>
-  <ul>
-    <li><a href="registrarProjeto.php">Registrar Projeto</a></li>
-    <li><a href="dashboard.php">Dashboard</a></li>
-    <li><a href="tasks.php">Tasks</a></li>
-    <li><a href="index.php">Login</a></li>
-    <li><a href="register.php">Register</a></li>
-  </ul>
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">TaskWise</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.php">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registrarProjeto.php">Registrar Projeto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tasks.php">Projetos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="subTasks.php">subTasks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.php">Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>

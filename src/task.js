@@ -102,8 +102,8 @@ window.onload = function () {
                         <td>${project.priority}</td>
                         <td>${project.status}</td>
                         <td>
+                            <button class=" btn btn-primary" data-toggle="modal" data-target="#myModal" ondblclick="openModal()" >OpenProject</button>
                             <button class="edit-button btn btn-primary" data-project-id=${project.id}>Edit</button>
-                       
                             <button class="delete-button btn btn-danger" data-project-id=${project.id}>Delete</button>
                          </td>
                     `;

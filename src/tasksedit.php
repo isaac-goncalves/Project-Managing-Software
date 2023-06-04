@@ -27,8 +27,8 @@
     <title>Edit Project</title>
 </head>
 
-<body>
-    <div id="chartWrapper" class="container">
+<body class="container m-4 w-90 mx-auto">
+    <div id="chartWrapper" >
     <center><h1>Edit Project</h1></center>
         <form id="edit-project-form" action="./backend/editProject.php" method="post">
             <input type="hidden" name="project_id" id="edit-project-id" value="0">

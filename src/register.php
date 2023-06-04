@@ -1,31 +1,33 @@
 <?php
 
-require_once('header.php');
-
 require_once('navbar.php');
 
 if (isset($_GET['error'])) {
     if ($_GET['error'] == "emptyinput") {
-        echo "<p>Fill in all fields!</p>";
+        echo '<div class="alert alert-danger">Fill in all fields!</div>';
     } else if ($_GET['error'] == "invaliduid") {
-        echo "<p>Choose a proper username!</p>";
+        echo '<div class="alert alert-danger">Choose a proper username!</div>';
     } else if ($_GET['error'] == "passwordsdontmatch") {
-        echo "<p>Passwords don't match!</p>";
+        echo '<div class="alert alert-danger">Passwords don\'t match!</div>';
     } else if ($_GET['error'] == "usernametaken") {
-        echo "<p>Username already taken!</p>";
+        echo '<div class="alert alert-danger">Username already taken!</div>';
     } else if ($_GET['error'] == "stmtfailed") {
-        echo "<p>Something went wrong, try again!</p>";
+        echo '<div class="alert alert-danger">Something went wrong, try again!</div>';
     }
 }
 
 if (isset($_GET['message'])) {
     if ($_GET['message'] == "succes") {
-        echo "<p>Register succesful!</p>";
+        echo '<div class="alert alert-success">Register successful!</div>';
     }
 }
 
 ?>
 
+<head>
+    <title> Login </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
 <html>
 <div class="loginWrapper">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
