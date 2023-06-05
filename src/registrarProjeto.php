@@ -38,7 +38,11 @@
                 </div>
                 <div class="form-group">
                     <label class="projLabel" for="status">Status</label>
-                    <input type="text" class="form-control" name="status" id="status" required>
+                    <select class="form-control" name="status" id="edit-status" required>
+                        <option value="open">Open</option>
+                        <option value="in_progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label class="projLabel" for="priority">Prioridade</label>

@@ -56,35 +56,7 @@ window.onload = function () {
         projectPriorityInput.value = projectData.priority;
         projectStatusInput.value = projectData.status;
         projectUserIdInput.value = projectData.user_id;
-        
 
-        // Example usage
-    
-        // description
-        // : 
-        // "3123123132"
-        // end_date
-        // : 
-        // "2023-06-09"
-        // id
-        // : 
-        // 2
-        // name
-        // : 
-        // "q2312312"
-        // priority
-        // : 
-        // "medio"
-        // start_date
-        // : 
-        // "2023-06-13"
-        // status
-        // : 
-        // "123123"
-        // user_id
-        // : 
-        // 123123
-        
 
     }
 
