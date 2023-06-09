@@ -1,16 +1,4 @@
-<div class="loginStatusWrapper">
-    <?php
-    session_start();
-    if (isset($_SESSION['user'])) {
-        echo "<h1>Welcome, " . $_SESSION['user']['username'] . "!</h1>";
-    } else {
-        echo "<h1>You are not logged in.</h1>";
-    }
-    ?>
-    <form action="backend/logout.php" method="post">
-        <button class='logoutButton' type="submit" name="logout-submit">Logout</button>
-    </form>
-</div>
+
 <html>
 
 <head>

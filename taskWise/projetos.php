@@ -249,7 +249,7 @@ ID	Task Name	Task Description	Project ID	Completed	Created At Create form with t
             console.log("Parameter 1: " + projectId);
 
             // Redirect to the openProject page with the project ID in the URL
-            window.location.href = "/src/openProject.php?id=" + projectId;
+            window.location.href = "./openProject.php?id=" + projectId;
         }
     </script>
 
