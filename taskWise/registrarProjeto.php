@@ -1,4 +1,3 @@
-<!-- <?php phpinfo(); ?> -->
 <?php
 ?>
 <html>
@@ -55,7 +54,7 @@
                 </div>
                 <div class="form-group">
                     <label class="projLabel" for="user_id">ID do usuário</label>
-                    <input type="text" class="form-control" placeholder="Readonly input here…" name="user_id" id="user_id" readonly >
+                    <input type="text" class="form-control" placeholder="Readonly input here…" name="user_id" id="user_id" readonly>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
@@ -66,6 +65,7 @@
             <?php echo $_GET['message']; ?>
         </p>
     <?php endif; ?>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 

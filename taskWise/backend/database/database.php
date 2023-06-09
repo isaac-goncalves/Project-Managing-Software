@@ -6,7 +6,7 @@ function getConnection()
     $host = "localhost";
     $port = "5432";
     $database = "gerenciamento_de_atividades";
-    $user = "carolineamarante";
+    $user = "postgres";
     $password = "2406";
     $dsn = "pgsql:host=$host;port=$port;dbname=$database;user=$user;password=$password";
     $options = [

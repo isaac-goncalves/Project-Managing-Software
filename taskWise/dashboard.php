@@ -1,23 +1,7 @@
-<div class="loginStatusWrapper">
-    <?php
-    session_start();
-    if (isset($_SESSION['user'])) {
-        echo "<h1>Welcome, " . $_SESSION['user']['username'] . "!</h1>";
-    } else {
-        echo "<h1>You are not logged in.</h1>";
-    }
-    ?>
-    <form action="backend/logout.php" method="post">
-        <button class='logoutButton' type="submit" name="logout-submit">Logout</button>
-    </form>
-</div>
-<?php require_once('header.php'); ?>
-<?php require_once('navbar.php'); ?>
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
-    <link rel="stylesheet" href="styles/dashboardStyles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {
@@ -78,12 +62,18 @@
 </head>
 
 <body>
-    <div id="chartWrapper">
-        <h1>Dashboard</h1>
-        <div id="chart_div"></div>
+    <?php require_once('navbar.php'); ?>
+    <div class="container">
+        <div class="card ">
+            <div class="card-body">
+                <h1>Dashboard</h1>
+                <div id="chart_div"></div>
+            </div>
+            <!-- now a logout button -->
+        </div>
     </div>
-    <!-- now a logout button -->
-
 </body>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </html>
