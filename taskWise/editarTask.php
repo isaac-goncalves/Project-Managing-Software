@@ -20,8 +20,7 @@
         <center>
             <h1>Edit Task</h1>
         </center>
-        <form action="./backend/editarTask.php" method="post">
-
+        <form action="./backend/editTask.php" method="post">
             <div class="form-group">
                 <label for="task_id">Task ID</label>
                 <input type="text" class="form-control" id="task_id" name="task_id" required>

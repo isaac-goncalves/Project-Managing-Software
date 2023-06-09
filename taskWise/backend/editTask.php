@@ -5,6 +5,7 @@ include './database/database.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the task ID from the request
     $taskId = $_POST['task_id'];
+    $project_id = $_POST['project_id'];
 
     // Retrieve other form data
     $taskName = $_POST['task_name'];
@@ -16,7 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     updateDatabase($taskId, $taskName, $taskDescription, $completed, $createdAt);
 
     // Redirect to the task list or a success page
-    header("Location: ../tasks.php");
+
+    header("Location: ../openProject.php?id=$project_id");
     exit();
 }
 
