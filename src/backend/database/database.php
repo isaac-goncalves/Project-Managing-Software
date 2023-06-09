@@ -5,8 +5,8 @@ function getConnection()
     // echo "Connecting to database...";
     $host = "localhost";
     $port = "5432";
-    $database = "ccpmClone";
-    $user = "postgres";
+    $database = "gerencimento-de-atividades";
+    $user = "db_SYSMANAGER";
     $password = "2406";
     $dsn = "pgsql:host=$host;port=$port;dbname=$database;user=$user;password=$password";
     $options = [
