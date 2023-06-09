@@ -17,3 +17,5 @@ postgreSQL general commands:
 psql: faz alguma coisa que nao entendi
 \du: lista os usuarios cadastrados	
 psql - U USERNAME: loga com o usuario informado no postgre
+create new user: sudo -u postgres createuser db_SYSMANAGER
+create database: sudo -u postgres createdb DBNAME
