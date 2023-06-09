@@ -11,48 +11,48 @@
     <!-- <link rel="stylesheet" href="styles/tasksedit.css"> -->
     <script type="text/javascript" src="./editarTask.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <title>Edit Project</title>
+    <title>Editar task</title>
 </head>
 
 <body class="container m-4 w-90 mx-auto">
     <?php require_once('navbar.php'); ?>
     <div id="chartWrapper">
         <center>
-            <h1>Edit Task</h1>
+            <h1>Editar task</h1>
         </center>
         <form action="./backend/editarTask.php" method="post">
 
             <div class="form-group">
-                <label for="task_id">Task ID</label>
+                <label for="task_id">ID task:</label>
                 <input type="text" class="form-control" id="task_id" name="task_id" required>
             </div>
 
             <div class="form-group">
-                <label for="projectId">Project ID</label>
+                <label for="projectId">ID projeto:</label>
                 <input type="text" class="form-control" id="projectId" name="project_id" required>
             </div>
             <div class="form-group">
-                <label for="taskName">Task Name</label>
+                <label for="taskName">Título:</label>
                 <input type="text" class="form-control" id="taskName" name="task_name" required>
             </div>
             <div class="form-group">
-                <label for="taskDescription">Task Description</label>
+                <label for="taskDescription">Descrição:</label>
                 <textarea class="form-control" id="taskDescription" name="task_description" required></textarea>
             </div>
             <div class="form-group">
-                <label for="completed">Completed</label>
+                <label for="completed">Status:</label>
                 <select class="form-control" id="completed" name="completed" required>
-                    <option value="true">True</option>
-                    <option value="false">False</option>
+                    <option value="true">Concluído</option>
+                    <option value="false">Pendente</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="createdAt">Created At</label>
+                <label for="createdAt">Criado em:</label>
                 <input type="date" class="form-control" id="createdAt" name="created_at" required>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
         </form>
     </div>
