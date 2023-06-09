@@ -28,6 +28,7 @@ if (isset($_GET['message'])) {
     <title> Login </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <html>
 <div class="loginWrapper">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">

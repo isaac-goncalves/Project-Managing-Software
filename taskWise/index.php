@@ -24,13 +24,12 @@ if (isset($_GET['error'])) {
     <title> Login </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
 <link rel="stylesheet" href="styles/loginStyles.css">
 
 <body>
-    
-
     <div class="container">
         <div class="loginWrapper">
             <h1 class="text-center">Login</h1>
