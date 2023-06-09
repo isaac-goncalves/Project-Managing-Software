@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     error_log("Code Ran", 0);
 
-    if (emptyInputLogin($email, $password) !== true) {
+    if (emptyInputLogin($email, $password) == false) {
         header("location: ../index.php?error=emptyinput");
         exit();
     }
