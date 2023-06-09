@@ -28,24 +28,27 @@ if (isset($_GET['message'])) {
 
 <body>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h1 class="text-center">Login</h1>
-                <form action="./backend/loginUser.php" method="post">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="email" placeholder="Email">
+        <div class="card ">
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <h1 class="card-header text-center">Login</h1>
+                        <form action="./backend/loginUser.php" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Add the Bootstrap JS (optional, for certain components) -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Add the Bootstrap JS (optional, for certain components) -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

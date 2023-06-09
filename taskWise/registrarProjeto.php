@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <label class="projLabel" for="user_id">ID do usuário</label>
-                    <input type="text" class="form-control" name="user_id" id="user_id" required>
+                    <input type="text" class="form-control" placeholder="Readonly input here…" name="user_id" id="user_id" readonly >
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
