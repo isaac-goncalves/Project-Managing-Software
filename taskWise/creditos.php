@@ -13,12 +13,20 @@
     <script type="text/javascript" src="./creditos.js"></script>
     <!-- <link rel="stylesheet" href="styles/tasks.css"> -->
 
-    <script>
-        // $(document).ready(function() {
-        //     $('#myModal').modal();
-        // }); 
-    </script>
+    <style>
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
+        .image-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 4rem;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,16 +37,18 @@
     ];
     ?>
 
-    <div class="d-flex justify-content-center align-items-center">
-        <?php foreach ($imagens as $imagem) { ?>
-            <div class="d-flex flex-column align-items-center mx-3">
-                <div class="rounded-circle" style="width: 150px; height: 150px; overflow: hidden;">
-                    <img src="<?php echo $imagem['url']; ?>" class="img-fluid" alt="Imagem">
+    <div class="container text-center">
+        <div class="row">
+            <?php foreach ($imagens as $imagem) { ?>
+                <div class="col-md-6">
+                    <div class="image-container">
+                        <img src="<?php echo $imagem['url']; ?>" alt="Imagem">
+                        <h4><?php echo $imagem['titulo']; ?></h4>
+                        <p><?php echo $imagem['sub-titulo']; ?></p>
+                    </div>
                 </div>
-                <h2 class="text-center"><?php echo $imagem['titulo']; ?></h2>
-                <h4 class="text-center"><?php echo $imagem['sub-titulo']; ?></h4>
-            </div>
-        <?php } ?>
+            <?php } ?>
+        </div>
     </div>
 
 </body>
