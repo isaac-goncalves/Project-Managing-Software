@@ -24,6 +24,18 @@ Enter psql: psql -U postgres
 
 Create new user: 
 
-CREATE USER db_SYSMANAGER WITH PASSWORD '2406';
+CREATE USER db_SYSMANAGER WITH PASSWORD 'ivuT_X_HqKDTl1=w';
+
+GRANT ALL PRIVILEGES ON DATABASE gerencimento_de_atividades TO db_SYSMANAGER;
+
+\q
+
+Create Database:
+
+createdb gerenciamento_de_atividades;
+
+CREATE DATABASE gerenciamento_de_atividades;
+
+\l (lista as databases criadas)
 
 createuser -U postgres -P db_SYSMANAGER (-P prompts for password)
