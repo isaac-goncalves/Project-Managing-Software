@@ -25,22 +25,39 @@ if (isset($_GET['message'])) {
 ?>
 
 <head>
-    <title> Login </title>
+    <title> Resgister </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
 <html>
-<div class="loginWrapper">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
-    <link rel="stylesheet" href="styles/registerStyles.css">
-    <h1> Register </h1>
-    <form action="./backend/registerUser.php" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="passwordRepeat" placeholder="Password">
-        <button type="submit">Registrar</button>
-        <form>
-</div>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center">Register</h1>
+                <form action="./backend/registerUser.php" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="passwordRepeat" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add the Bootstrap JS (optional, for certain components) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 
 </html>
