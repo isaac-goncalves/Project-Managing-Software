@@ -18,7 +18,7 @@
     <div class="card">
         <div class="card-body">
             <h1 class="card-header">Registrar novo projeto</h1>
-            <form action="../src/backend/createProject.php" method="post">
+            <form action="./backend/createProject.php" method="post">
                 <div class="form-group">
                     <label class="projLabel" for="name">Nome do projeto:</label>
                     <input type="text" class="form-control" name="name" id="name" required>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="form-group">
                     <label class="projLabel" for="user_id">ID do usuário</label>
-                    <input type="text" class="form-control" placeholder="Readonly input here…" name="user_id" id="user_id" readonly>
+                    <input value="1" type="text" class="form-control" placeholder="Readonly input here…" name="user_id" id="user_id" readonly>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
