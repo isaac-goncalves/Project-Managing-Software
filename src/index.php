@@ -34,7 +34,7 @@ if (isset($_GET['error'])) {
     <div class="container">
         <div class="loginWrapper">
             <h1 class="text-center">Login</h1>
-            <form action="/src/backend/loginUser.php" method="post">
+            <form action="./backend/loginUser.php" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" name="email" placeholder="Email" required>
                 </div>
