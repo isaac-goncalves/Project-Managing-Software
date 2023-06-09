@@ -36,9 +36,9 @@
 </head>
 
 <body>
+    <?php require_once('navbar.php'); ?>
     <div class="container mx-auto">
         <div class="card">
-            <?php require_once('navbar.php'); ?>
             <h1 id="projectName" class="card-header">Projeto: {NOME DO PROJETO}</h1>
             <div class="card">
                 <div class="card-body">
@@ -201,7 +201,7 @@
         console.log("Parameter 1: " + task_id);
 
         // Redirect to the openProject page with the project ID in the URL
-        window.location.href = "./task-edit.php?task_id=" + task_id;
+        window.location.href = "./editarTask.php?task_id=" + task_id;
     }
 
     function openModal(projectId) {

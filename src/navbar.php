@@ -14,10 +14,7 @@
           <a class="nav-link" href="registrarProjeto.php">Registrar Projeto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="tasks.php">Projetos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="subTasks.php">subTasks</a>
+          <a class="nav-link" href="projetos.php">Projetos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php">Login</a>

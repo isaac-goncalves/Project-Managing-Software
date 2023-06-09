@@ -14,22 +14,21 @@
 <?php require_once('header.php'); ?>
 <?php require_once('navbar.php'); ?>
 <html>
-<style>
 
-
-</style>
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/tasksedit.css">
-    <script type="text/javascript" src="./tasksedit.js"></script>
+    <link rel="stylesheet" href="styles/editarProjeto.css">
+    <script type="text/javascript" src="./editarProjeto.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <title>Edit Project</title>
+    <title>Editar Projeto</title>
 </head>
 
 <body class="container m-4 w-90 mx-auto">
-    <div id="chartWrapper" >
-    <center><h1>Edit Project</h1></center>
+    <div id="chartWrapper">
+        <center>
+            <h1>Editar Projeto</h1>
+        </center>
         <form id="edit-project-form" action="./backend/editProject.php" method="post">
             <input type="hidden" name="project_id" id="edit-project-id" value="0">
             <div class="form-group">

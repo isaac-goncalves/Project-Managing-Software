@@ -20,8 +20,8 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/tasksedit.css">
-    <script type="text/javascript" src="./task-edit.js"></script>
+    <!-- <link rel="stylesheet" href="styles/tasksedit.css"> -->
+    <script type="text/javascript" src="./editarTask.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <title>Edit Project</title>
 </head>

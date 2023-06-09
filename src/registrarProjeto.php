@@ -18,34 +18,34 @@
 
     <div class="card">
         <div class="card-body">
-            <h1 class="card-header">Insira um novo projeto</h1>
+            <h1 class="card-header">Registrar novo projeto</h1>
             <form action="../src/backend/createProject.php" method="post">
                 <div class="form-group">
-                    <label class="projLabel" for="name">Nome do projeto</label>
+                    <label class="projLabel" for="name">Nome do projeto:</label>
                     <input type="text" class="form-control" name="name" id="name" required>
                 </div>
                 <div class="form-group">
-                    <label class="projLabel" for="description">Descrição</label>
+                    <label class="projLabel" for="description">Descrição:</label>
                     <input type="text" class="form-control" name="description" id="description" required>
                 </div>
                 <div class="form-group">
-                    <label class="projLabel" for="start_date">Data de início</label>
+                    <label class="projLabel" for="start_date">Data de início:</label>
                     <input type="date" class="form-control" name="start_date" id="start_date" required>
                 </div>
                 <div class="form-group">
-                    <label class="projLabel" for="end_date">Data de término</label>
+                    <label class="projLabel" for="end_date">Data de término:</label>
                     <input type="date" class="form-control" name="end_date" id="end_date" required>
                 </div>
                 <div class="form-group">
-                    <label class="projLabel" for="status">Status</label>
+                    <label class="projLabel" for="status">Status:</label>
                     <select class="form-control" name="status" id="edit-status" required>
-                        <option value="open">Open</option>
-                        <option value="in_progress">In Progress</option>
-                        <option value="completed">Completed</option>
+                        <option value="open">Em aberto</option>
+                        <option value="in_progress">Em progresso</option>
+                        <option value="completed">Finalizado</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="projLabel" for="priority">Prioridade</label>
+                    <label class="projLabel" for="priority">Prioridade:</label>
                     <select class="form-control" name="priority" id="priority" required>
                         <option value="alto">Alto</option>
                         <option value="baixo">Baixo</option>

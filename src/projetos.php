@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
-    <script type="text/javascript" src="./task.js"></script>
+    <script type="text/javascript" src="./projetos.js"></script>
     <!-- <link rel="stylesheet" href="styles/tasks.css"> -->
 
     <script>

@@ -49,7 +49,6 @@ window.onload = function () {
         const projectCompletedInput = document.querySelector('#completed');
         const projectCreatedAtInput = document.querySelector('#createdAt');
 
-
         task_idInput.value = projectData.id;
         projectIdInput.value = projectData.project_id;
         projectNameInput.value = projectData.task_name;
@@ -59,7 +58,6 @@ window.onload = function () {
         const formattedCreatedAt = createdAtDate.toISOString().split('T')[0];
 
         projectCreatedAtInput.value = formattedCreatedAt;
-
 
     }
 

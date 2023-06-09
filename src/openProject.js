@@ -41,7 +41,7 @@ window.onload = function () {
                 const projectId = button.getAttribute('data-project-id');
 
                 // console.log(button.dataset.data-project-id);
-                window.location.href = `./tasksedit.php?project_id=${projectId}`;
+                window.location.href = `./editarTask.php?project_id=${projectId}`;
             });
         });
 
