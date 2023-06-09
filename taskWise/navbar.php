@@ -12,16 +12,19 @@
         if (isset($_SESSION['user'])) {
           $username = $_SESSION['user']['username'];
           echo '
-          <li class="nav-item">
-          <a class="nav-link" href="dashboard.php">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="projetos.php">Projetos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="registrarProjeto.php">Registrar Projeto</a>
-        </li>
-          <li class="nav-item">
+                      <li class="nav-item">
+                      <a class="nav-link" href="dashboard.php">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="projetos.php">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="registrarProjeto.php">Registrar Projeto</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="creditos.php">Créditos</a>
+                  </li>
+                      <li class="nav-item">
                       <span class="nav-link">Logged in as ' . $username . '</span>
                     </li>
                     <form style="margin-block-end: 0;" action="backend/logout.php" method="post">
