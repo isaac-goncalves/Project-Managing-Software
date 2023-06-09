@@ -19,3 +19,11 @@ psql: faz alguma coisa que nao entendi
 psql - U USERNAME: loga com o usuario informado no postgre
 create new user: sudo -u postgres createuser db_SYSMANAGER
 create database: sudo -u postgres createdb DBNAME
+
+Enter psql: psql -U postgres
+
+Create new user: 
+
+CREATE USER db_SYSMANAGER WITH PASSWORD '2406';
+
+createuser -U postgres -P db_SYSMANAGER (-P prompts for password)

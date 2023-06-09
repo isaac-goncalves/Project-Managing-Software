@@ -7,7 +7,7 @@ function getConnection()
     $port = "5432";
     $database = "gerencimento-de-atividades";
     $user = "db_SYSMANAGER";
-    $password = "2406";
+    $password = "ivuT_X_HqKDTl1=w";
     $dsn = "pgsql:host=$host;port=$port;dbname=$database;user=$user;password=$password";
     $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
