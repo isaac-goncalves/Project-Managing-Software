@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -9,7 +8,6 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 
     <script type="text/javascript" src="./projetos.js"></script>
     <!-- <link rel="stylesheet" href="styles/tasks.css"> -->
@@ -23,9 +21,23 @@
 </head>
 
 <body>
-    <div class="container mx-auto">
+    <?php require_once('navbar.php'); ?>
+    <?php
+
+    // if (isset($_GET['message'])) {
+    //     if ($_GET['message'] == "succes") {
+    //         echo '<div class="alert alert-success">$decryptedMessage</div>';
+    //     }
+    // }
+
+    if (isset($_GET['message'])) {
+        $decryptedMessage = urldecode($_GET['message']);
+        echo '<div class="alert alert-success">' . $decryptedMessage . '</div>';
+    }
+
+    ?>
+    <div class="container">
         <div class="card">
-            <?php require_once('navbar.php'); ?>
             <h1 class="card-header">Projetos</h1>
             <div class="card-body">
 
@@ -46,7 +58,7 @@
                     </thead>
                     <tbody></tbody>
                 </table>
-                <div>
+                <div class="modal-footer">
                     <button class='btn btn-primary' type="submit" name="logout-submit" onclick="window.location.href='./registrarProjeto.php'">Add project</button>
                 </div>
             </div>

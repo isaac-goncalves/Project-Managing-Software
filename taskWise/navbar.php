@@ -11,6 +11,7 @@
         session_start();
         if (isset($_SESSION['user'])) {
           $username = $_SESSION['user']['username'];
+          $id = $_SESSION['user']['id'];
           echo '
                       <li class="nav-item">
                       <a class="nav-link" href="dashboard.php">Dashboard</a>

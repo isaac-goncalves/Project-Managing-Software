@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     updateDatabase($projectId, $name, $description, $startDate, $endDate, $status, $priority, $userId);
 
     // Redirect to the project list or a success page
-    header("Location: ../tasks.php");
+    header("Location: ../projetos.php?message=Projeto editado com sucesso!");
     exit();
 }
 

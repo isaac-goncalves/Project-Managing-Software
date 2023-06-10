@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     insertToDatabase($name, $description, $start_date, $end_date, $status, $priority, $user_id);
 
     // Redirect to the index.php file
-    header("Location: ../index.php?message=Projeto inserido com sucesso!");
+    header("Location: ../projetos.php?message=Projeto inserido com sucesso!");
     exit();
 }
 

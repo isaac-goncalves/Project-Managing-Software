@@ -96,14 +96,14 @@ window.onload = function () {
     }
 
     async function startComponent() {
-        const params = await getParams()
-
+        const params = getParams()
         console.log(params)
 
         //funcção que faz o fetch dos dados do projeto 
 
         const projectData = await fetch(`./backend/getProjects.php?project_id=${params.project_id}`).then(response => response.json())
 
+        console.log("projectData")
         console.log(projectData)
 
         renderProjectDataOnPage(projectData)
@@ -160,21 +160,30 @@ window.onload = function () {
 
     function renderProjectDataOnPage(projectData) {
 
-        console.log(projectData);
+        const projectName = document.getElementById('projectName');
 
         const descriptionlabel = document.getElementById('description');
         console.log(descriptionlabel)
-        
+
         const startDatelabel = document.getElementById('startDate');
         const endDatelabel = document.getElementById('endDate');
         const prioritylabel = document.getElementById('priority');
         const statusLabel = document.getElementById('status');
+        const nome_criador = document.getElementById('nome_criador');
+        const id_criador = document.getElementById('id_criador');
+        const email_criador = document.getElementById('email_criador');
 
-        descriptionlabel.value = projectData.description;
-        startDatelabel.value = projectData.start_date;
-        endDatelabel.value = projectData.end_date;
-        prioritylabel.value = projectData.priority;
-        statusLabel.value = projectData.status;
+        nome_criador.innerHTML = projectData.nome_criador.toUpperCase();
+        id_criador.innerHTML = projectData.user_id
+        email_criador.innerHTML = projectData.email_criador
+
+        projectName.innerHTML = "Project: " + projectData.name;
+
+        descriptionlabel.innerHTML = projectData.description;
+        startDatelabel.innerHTML = projectData.start_date;
+        endDatelabel.innerHTML = projectData.end_date;
+        prioritylabel.innerHTML = projectData.priority;
+        statusLabel.innerHTML = projectData.status;
 
     }
 

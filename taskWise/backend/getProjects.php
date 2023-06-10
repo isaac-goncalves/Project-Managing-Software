@@ -8,7 +8,10 @@ if (isset($_GET['project_id'])) {
     // Fetch a specific project by ID
     $projectId = $_GET['project_id'];
 
-    $statement = $pdo->prepare("SELECT * FROM projetos WHERE id = :id");
+    $statement = $pdo->prepare("SELECT projetos.*, users.username AS nome_criador, users.email AS email_criador
+                            FROM projetos
+                            INNER JOIN users ON projetos.user_id = users.id
+                            WHERE projetos.id = :id");
     $statement->bindParam(':id', $projectId);
     $statement->execute();
 
@@ -26,4 +29,3 @@ if (isset($_GET['project_id'])) {
     header('Content-Type: application/json');
     echo json_encode($projects);
 }
-?>

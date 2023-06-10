@@ -11,11 +11,10 @@ if (isset($_GET['error'])) {
 }
 
 if (isset($_GET['message'])) {
-    if ($_GET['message'] == "succes") {
+    if ($_GET['message'] == "success") {
         echo '<div class="alert alert-success">Login successful!</div>';
     }
 }
-
 ?>
 
 <head>

@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -10,8 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xxxxx" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-
     <script type="text/javascript" src="./openProject.js"></script>
     <!-- <link rel="stylesheet" href="styles/tasks.css"> -->
 
@@ -27,34 +24,52 @@
     <?php require_once('navbar.php'); ?>
     <div class="container mx-auto">
         <div class="card">
-            <h1 id="projectName" class="card-header">Projeto: {NOME DO PROJETO}</h1>
+            <h1 id="projectName" class="card-header">Projeto: Loading...</h1>
             <div class="card">
                 <div class="card-body">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">
                                 <label class="label label-info font-weight-bold" for="description">Description:</label>
-                                <span id="description"></span>
+                                <span id="description">Loading...</span>
                             </div>
                             <div class="col-sm-6">
                                 <label class="label label-primary font-weight-bold" for="startDate">Start Date:</label>
-                                <span id="startDate">2023-06-01</span>
+                                <span id="startDate">Loading...</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <label class="label label-danger font-weight-bold" for="endDate">End Date:</label>
-                                <span id="endDate">2023-06-30</span>
+                                <label class="label label-danger font-weight-bold" for="endDate">End Date: </label>
+                                <span id="endDate">Loading...</span>
                             </div>
                             <div class="col-sm-6">
-                                <label class="label label-warning font-weight-bold" for="priority">Prioridade:</label>
-                                <span id="priority">High</span>
+                                <label class="label label-warning font-weight-bold" for="priority">Prioridade: </label>
+                                <span id="priority">Loading...</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <label class="label label-success font-weight-bold" for="status">Status:</label>
-                                <span id="status">In Progress</span>
+                                <label class="label label-success font-weight-bold" for="status">Status: </label>
+                                <span id="status">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="label label-success font-weight-bold" for="status">Criador: </label>
+                                <span id="nome_criador">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="label label-success font-weight-bold" for="status">Id: </label>
+                                <span id="id_criador">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="label label-success font-weight-bold" for="status">Email: </label>
+                                <span id="email_criador">Loading...</span>
                             </div>
                         </div>
                     </div>
@@ -77,7 +92,7 @@
                     </thead>
                     <tbody></tbody>
                 </table>
-                <div>
+                <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="openModal('<?php echo $_GET['id']; ?>')" data-toggle="modal" data-target="#myModalCreateNewTask">Add Task</button>
                 </div>
             </div>
@@ -96,16 +111,15 @@
             </div>
             <!-- Modal body -->
             <div class="modal-body">
-                <p>Modal body text goes here.</p>
                 <!-- ID	Task Name	Task Description	Project ID	Completed	Created At Create form with this data -->
                 <form action="./backend/createTask.php" method="post">
                     <div class="form-group">
                         <label for="projectId">Project ID</label>
-                        <input type="text" class="form-control" id="projectId" name="project_id" required>
+                        <input type="text" class="form-control" id="projectId" name="project_id" readonly>
                     </div>
                     <div class="form-group">
                         <label for="taskName">Task Name</label>
-                        <input type="text" class="form-control" id="taskName" name="task_name" required>
+                        <input type="text" class="form-control" id="taskName" name="task_name" readonly>
                     </div>
                     <div class="form-group">
                         <label for="taskDescription">Task Description</label>

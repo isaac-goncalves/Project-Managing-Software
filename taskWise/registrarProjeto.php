@@ -54,9 +54,11 @@
                 </div>
                 <div class="form-group">
                     <label class="projLabel" for="user_id">ID do usuário</label>
-                    <input value="1" type="text" class="form-control" placeholder="Readonly input here…" name="user_id" id="user_id" readonly>
+                    <input value="<?php echo $_SESSION['user']['id']; ?>" type="text" class="form-control" placeholder="Readonly input here…" name="user_id" id="user_id" readonly>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
             </form>
         </div>
     </div>
