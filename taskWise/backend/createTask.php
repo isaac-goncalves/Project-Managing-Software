@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     insertToDatabase($task_name, $task_description, $project_id, $completed, $created_at);
 
     // Redirect to the index.php file or the desired page
-    header("Location: ../index.php?message=Task created successfully!");
+    header("Location: ../openProject.php?id=" . $project_id . "&message=Task editada com sucesso!");
     exit();
 }
 

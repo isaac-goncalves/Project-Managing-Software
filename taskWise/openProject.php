@@ -22,6 +22,20 @@
 
 <body>
     <?php require_once('navbar.php'); ?>
+    <?php
+
+    // if (isset($_GET['message'])) {
+    //     if ($_GET['message'] == "succes") {
+    //         echo '<div class="alert alert-success">$decryptedMessage</div>';
+    //     }
+    // }
+
+    if (isset($_GET['message'])) {
+        $decryptedMessage = urldecode($_GET['message']);
+        echo '<div class="alert alert-success">' . $decryptedMessage . '</div>';
+    }
+
+    ?>
     <div class="container mx-auto">
         <div class="card">
             <h1 id="projectName" class="card-header">Projeto: Loading...</h1>
@@ -94,6 +108,7 @@
                 </table>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="openModal('<?php echo $_GET['id']; ?>')" data-toggle="modal" data-target="#myModalCreateNewTask">Add Task</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='http://localhost/projetos.php'">Voltar</button>
                 </div>
             </div>
             <!-- now button to add a new project -->
@@ -119,7 +134,7 @@
                     </div>
                     <div class="form-group">
                         <label for="taskName">Task Name</label>
-                        <input type="text" class="form-control" id="taskName" name="task_name" readonly>
+                        <input type="text" class="form-control" id="taskName" name="task_name">
                     </div>
                     <div class="form-group">
                         <label for="taskDescription">Task Description</label>
