@@ -58,8 +58,9 @@
                     </thead>
                     <tbody></tbody>
                 </table>
-                <div class="modal-footer">
-                    <button class='btn btn-primary' type="submit" name="logout-submit" onclick="window.location.href='./registrarProjeto.php'">Add project</button>
+                <div class="modal-footer  ">
+                    <button class='btn btn-primary' type="submit" name="logout-submit" onclick="window.location.href='./registrarProjeto.php'">Add Project</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='http://localhost/dashboard.php'">Voltar</button>
                 </div>
             </div>
             <!-- now button to add a new project -->
