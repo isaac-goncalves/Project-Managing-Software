@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="./creditos.js"></script>
     <!-- <link rel="stylesheet" href="styles/tasks.css"> -->
-
+    <title>Creditos</title>
     <style>
         .image-container {
             text-align: center;

@@ -1,10 +1,9 @@
 <html>
-<style>
-
-
-</style>
 
 <head>
+    <?php 
+        require('navbar.php'); 
+    ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="styles/tasksedit.css"> -->
@@ -13,8 +12,8 @@
     <title>Editar task</title>
 </head>
 
-<body class="container">
-    <?php require_once('navbar.php'); ?>
+<body>
+<div  class="container">
     <div class="card">
         <div class="card-body">
             <h1 class="card-header">Editar task</h1>
@@ -54,6 +53,7 @@
             </form>
         </div>
     </div>
+</div>
 </body>
 
 
