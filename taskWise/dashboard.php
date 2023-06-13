@@ -4,6 +4,7 @@
 <html>
 
 <head>
+<title>Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -62,6 +63,7 @@
             chart.draw(data, options);
         }
     </script>
+
 </head>
 
 <body>

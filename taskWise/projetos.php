@@ -2,6 +2,8 @@
 <html>
 
 <head>
+<title>Projetos</title>
+
     <style>
         .table .btn {
             margin-right: 5px;

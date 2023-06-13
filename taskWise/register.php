@@ -25,7 +25,7 @@ if (isset($_GET['message'])) {
 ?>
 
 <head>
-    <title> Resgister </title>
+    <title> Registrar </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
