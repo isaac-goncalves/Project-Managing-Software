@@ -5,13 +5,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $passwordRepeat = $_POST['passwordRepeat'];
+    $datebirth = $_POST['datebirth'];
 
     require_once('./functions/registerFunctions.php');
     require_once './database/database.php';
 
     error_log("Error: Something went wrong", 0);
 
-    if(emptyInputRegister($username, $password, $passwordRepeat, $email) !== true)  {
+    if(emptyInputRegister($username, $password, $email, $datebirth) !== true)  {
         header("location: ../register.php?error=emptyinput");
         exit();
     }
@@ -29,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    createUser( $username ,$email , $password);
+    createUser( $username ,$email , $password , $datebirth);
 
 }
 else {

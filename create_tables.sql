@@ -38,13 +38,14 @@ ADD
 CREATE TABLE
   public.users (
     id serial NOT NULL,
-    username character varying(255) NOT NULL,
-    password character varying(255) NOT NULL,
-    email character varying(255) NOT NULL,
-    created_at timestamp without time zone NULL DEFAULT CURRENT_TIMESTAMP
+    username character varying (255) NOT NULL,
+    password character varying (255) NOT NULL,
+    email character varying (255) NOT NULL,
+    created_at timestamp without time zone NULL DEFAULT CURRENT_TIMESTAMP,
+    datebirth character varying (15) NULL
   );
 
 ALTER TABLE
   public.users
 ADD
-  CONSTRAINT users_pkey PRIMARY KEY (id);
+  CONSTRAINT users_pkey PRIMARY KEY (id)

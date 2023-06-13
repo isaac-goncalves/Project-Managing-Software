@@ -47,15 +47,15 @@ function emptyInputRegister($username, $password, $passwordRepeat, $email) {
         }
     }
 
-    function createUser($username, $email, $password) {
+    function createUser($username, $email, $password, $datebirth) {
         $pdo = getConnection();
     
         // Gerar o hash da senha
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     
-        $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+        $sql = "INSERT INTO users (username, email, password, datebirth) VALUES (:username, :email, :password, :datebirth)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(['username' => $username, 'email' => $email, 'password' => $hashedPassword]);
+        $stmt->execute(['username' => $username, 'email' => $email, 'password' => $hashedPassword, 'datebirth' => $datebirth]);
     
         header("location: ../register.php?message=succes");
         exit();
