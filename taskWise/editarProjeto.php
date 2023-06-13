@@ -1,4 +1,7 @@
-<?php require('session.php'); ?>
+<?php
+require('session.php');
+?>
+
 <html>
 
 <head>

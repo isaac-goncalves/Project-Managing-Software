@@ -1,4 +1,7 @@
-<?php require('session.php'); ?>
+<?php
+require('session.php');
+?>
+
 <html>
 
 <head>
@@ -111,7 +114,7 @@
                 </table>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="openModal('<?php echo $_GET['id']; ?>')" data-toggle="modal" data-target="#myModalCreateNewTask">Add Task</button>
-                    <button type="button" class="btn btn-secondary" onclick="window.location.href='http://localhost/projetos.php'">Voltar</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='./projetos.php'">Voltar</button>
                 </div>
             </div>
             <!-- now button to add a new project -->

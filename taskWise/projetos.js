@@ -113,9 +113,11 @@ window.onload = function () {
                         <td>${project.priority}</td>
                         <td>${project.status}</td>
                         <td>
-                            <button class=" btn btn-primary"  data-project-id=${project.id} onclick="openProject(this, 'data-project-id')" >OpenProject</button>
-                            <button class="edit-button btn btn-primary" data-project-id=${project.id}>Edit</button>
-                            <button class="delete-button btn btn-danger" data-project-id=${project.id}>Delete</button>
+                            <div style="display: flex">
+                                <button class=" btn btn-primary"  data-project-id=${project.id} onclick="openProject(this, 'data-project-id')" >OpenProject</button>
+                                <button class="edit-button btn btn-primary" data-project-id=${project.id}>Edit</button>
+                                <button class="delete-button btn btn-danger" data-project-id=${project.id}>Delete</button>
+                            </div>
                          </td>
                     `;
                     tableBody.appendChild(row);

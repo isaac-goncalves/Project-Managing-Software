@@ -1,5 +1,7 @@
 <?php
 
+
+
 require_once('navbar.php');
 
 if (isset($_GET['error'])) {
@@ -51,6 +53,9 @@ if (isset($_GET['message'])) {
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="passwordRepeat" placeholder="Confirm Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" name="datebirth" placeholder="Data de Nascimento">
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </form>

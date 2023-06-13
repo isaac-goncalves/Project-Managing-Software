@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['user'] = $user;
     Error_log("Error: " . print_r($user, true));
     Error_log("Session Data: " . print_r($_SESSION['user'], true));
-    header("location: ../dashboard.php");
+    header("location: ../projetos.php");
     exit();
 
 } else {

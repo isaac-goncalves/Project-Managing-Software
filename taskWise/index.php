@@ -1,5 +1,16 @@
 <?php
 
+session_start();
+
+// Verificar se o usuário está logado
+if (isset($_SESSION['user']['username'])) {
+    header('Location: projetos.php');
+    exit();
+
+    // Usuário logado, renderizar o conteúdo da página
+};
+
+
 require_once('navbar.php');
 
 if (isset($_GET['error'])) {

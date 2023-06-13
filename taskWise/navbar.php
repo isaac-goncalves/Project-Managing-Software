@@ -8,7 +8,7 @@
       <ul class="navbar-nav ml-auto">
 
         <?php
-        session_start();
+        
         if (isset($_SESSION['user'])) {
           $username = $_SESSION['user']['username'];
           $id = $_SESSION['user']['id'];

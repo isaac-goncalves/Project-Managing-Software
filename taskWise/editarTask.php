@@ -1,4 +1,7 @@
-<?php require('session.php'); ?>
+<?php
+require('session.php');
+?>
+
 <html>
 
 <head>
@@ -49,7 +52,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Salvar</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="history.back();">Fechar</button>
+
                 </div>
             </form>
         </div>
