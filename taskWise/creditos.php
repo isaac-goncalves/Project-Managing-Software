@@ -1,5 +1,5 @@
+<?php require('session.php'); ?>
 <html>
-
 <head>
     <?php 
         require_once('navbar.php'); 
