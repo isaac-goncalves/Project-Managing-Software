@@ -50,17 +50,17 @@ require('session.php');
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">
-                                <label class="label label-info font-weight-bold" for="description">Description:</label>
+                                <label class="label label-info font-weight-bold" for="description">Descrição:</label>
                                 <span id="description">Loading...</span>
                             </div>
                             <div class="col-sm-6">
-                                <label class="label label-primary font-weight-bold" for="startDate">Start Date:</label>
+                                <label class="label label-primary font-weight-bold" for="startDate">Início:</label>
                                 <span id="startDate">Loading...</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <label class="label label-danger font-weight-bold" for="endDate">End Date: </label>
+                                <label class="label label-danger font-weight-bold" for="endDate">Fim: </label>
                                 <span id="endDate">Loading...</span>
                             </div>
                             <div class="col-sm-6">
@@ -82,7 +82,7 @@ require('session.php');
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <label class="label label-success font-weight-bold" for="status">Id: </label>
+                                <label class="label label-success font-weight-bold" for="status">UID: </label>
                                 <span id="id_criador">Loading...</span>
                             </div>
                         </div>
@@ -102,18 +102,18 @@ require('session.php');
                 <table class="table table-hover" id="projectTable">
                     <thead>
                         <tr>
-                            <th>Completed</th>
-                            <th>ID</th>
-                            <th>Task Name</th>
-                            <th>Task Description</th>
-                            <th>Created At</th>
-                            <th>Action</th>
+                            <th>Finalizado</th>
+                            <th>TID</th>
+                            <th>Task</th>
+                            <th>Descrição</th>
+                            <th>Criado em</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="openModal('<?php echo $_GET['id']; ?>')" data-toggle="modal" data-target="#myModalCreateNewTask">Add Task</button>
+                    <button type="button" class="btn btn-primary" onclick="openModal('<?php echo $_GET['id']; ?>')" data-toggle="modal" data-target="#myModalCreateNewTask">Nova Task</button>
                     <button type="button" class="btn btn-secondary" onclick="window.location.href='./projetos.php'">Voltar</button>
                 </div>
             </div>
@@ -135,31 +135,31 @@ require('session.php');
                 <!-- ID	Task Name	Task Description	Project ID	Completed	Created At Create form with this data -->
                 <form action="./backend/createTask.php" method="post">
                     <div class="form-group">
-                        <label for="projectId">Project ID</label>
+                        <label for="projectId">PID</label>
                         <input type="text" class="form-control" id="projectId" name="project_id" readonly>
                     </div>
                     <div class="form-group">
-                        <label for="taskName">Task Name</label>
+                        <label for="taskName">Task</label>
                         <input type="text" class="form-control" id="taskName" name="task_name">
                     </div>
                     <div class="form-group">
-                        <label for="taskDescription">Task Description</label>
+                        <label for="taskDescription">Descrição</label>
                         <textarea class="form-control" id="taskDescription" name="task_description" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="completed">Completed</label>
+                        <label for="completed">Finalizado</label>
                         <select class="form-control" id="completed" name="completed" required>
-                            <option value="true">True</option>
-                            <option value="false">False</option>
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="createdAt">Created At</label>
+                        <label for="createdAt">Criado em</label>
                         <input type="date" class="form-control" id="createdAt" name="created_at" required>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                     </div>
                 </form>
             </div>
@@ -181,31 +181,31 @@ require('session.php');
                 <!-- ID	Task Name	Task Description	Project ID	Completed	Created At Create form with this data -->
                 <form action="./backend/createTask.php" method="post">
                     <div class="form-group">
-                        <label for="projectId">Project ID</label>
+                        <label for="projectId">PID</label>
                         <input type="text" class="form-control" id="projectId" name="project_id" required>
                     </div>
                     <div class="form-group">
-                        <label for="taskName">Task Name</label>
+                        <label for="taskName">Task</label>
                         <input type="text" class="form-control" id="taskName" name="task_name" required>
                     </div>
                     <div class="form-group">
-                        <label for="taskDescription">Task Description</label>
+                        <label for="taskDescription">Descrição</label>
                         <textarea class="form-control" id="taskDescription" name="task_description" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="completed">Completed</label>
+                        <label for="completed">Finalizado</label>
                         <select class="form-control" id="completed" name="completed" required>
-                            <option value="true">True</option>
-                            <option value="false">False</option>
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="createdAt">Created At</label>
+                        <label for="createdAt">Criado em</label>
                         <input type="date" class="form-control" id="createdAt" name="created_at" required>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                     </div>
                 </form>
             </div>

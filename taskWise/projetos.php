@@ -54,19 +54,19 @@ require('session.php');
                 <table class="table table-hover" id="projectTable">
                     <thead>
                         <tr>
-                            <th>Project Name</th>
-                            <th>Description</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
+                            <th>Projeto</th>
+                            <th>Descrição</th>
+                            <th>Início</th>
+                            <th>Fim</th>
                             <th>Prioridade</th>
                             <th>Status</th>
-                            <th>Actions</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
                 <div class="modal-footer  ">
-                    <button class='btn btn-primary' type="submit" name="logout-submit" onclick="window.location.href='./registrarProjeto.php'">Add Project</button>
+                    <button class='btn btn-primary' type="submit" name="logout-submit" onclick="window.location.href='./registrarProjeto.php'">Novo Projeto</button>
                 </div>
             </div>
             <!-- now button to add a new project -->
@@ -80,7 +80,7 @@ require('session.php');
         <div class="modal-content">
             <!-- Modal header -->
             <div class="modal-header">
-                <h3 class="modal-title">Project Details</h3>
+                <h3 class="modal-title">Detalhes do projeto</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!-- Modal body -->
@@ -101,12 +101,12 @@ require('session.php');
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Task Name</th>
-                                            <th>Task Description</th>
-                                            <th>Project ID</th>
-                                            <th>Completed</th>
-                                            <th>Created At</th>
-                                            <th>Action</th>
+                                            <th>Task</th>
+                                            <th>Descrição task</th>
+                                            <th>PID</th>
+                                            <th>Finalizado</th>
+                                            <th>Criado em</th>
+                                            <th>Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody style="max-height: 200px; overflow-y: auto;">
@@ -119,10 +119,10 @@ require('session.php');
                                             <td>teste</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalEdit">
-                                                    Edit
+                                                    Editar
                                                 </button>
                                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModalDelete">
-                                                    Delete
+                                                    Excluir
                                                 </button>
                                             </td>
                                         </tr>
@@ -135,10 +135,10 @@ require('session.php');
                                             <td>teste</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalEdit">
-                                                    Edit
+                                                    Editar
                                                 </button>
                                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModalDelete">
-                                                    Delete
+                                                    Excluir
                                                 </button>
                                             </td>
                                         </tr>
@@ -224,29 +224,29 @@ ID	Task Name	Task Description	Project ID	Completed	Created At Create form with t
                             <input type="text" class="form-control" id="taskId" name="taskId" required>
                         </div>
                         <div class="form-group">
-                            <label for="taskName">Task Name</label>
+                            <label for="taskName">Task</label>
                             <input type="text" class="form-control" id="taskName" name="taskName" required>
                         </div>
                         <div class="form-group">
-                            <label for="taskDescription">Task Description</label>
+                            <label for="taskDescription">Descrição task</label>
                             <textarea class="form-control" id="taskDescription" name="taskDescription" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="projectId">Project ID</label>
+                            <label for="projectId">PID</label>
                             <input type="text" class="form-control" id="projectId" name="projectId" required>
                         </div>
                         <div class="form-group">
-                            <label for="completed">Completed</label>
+                            <label for="completed">Finalizado</label>
                             <select class="form-control" id="completed" name="completed" required>
-                                <option value="true">True</option>
-                                <option value="false">False</option>
+                                <option value="true">Sim</option>
+                                <option value="false">Não</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="createdAt">Created At</label>
+                            <label for="createdAt">Criado em</label>
                             <input type="date" class="form-control" id="createdAt" name="createdAt" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
                 <!-- Modal footer -->

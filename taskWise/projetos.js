@@ -114,9 +114,9 @@ window.onload = function () {
                         <td>${project.status}</td>
                         <td>
                             <div style="display: flex">
-                                <button class=" btn btn-primary"  data-project-id=${project.id} onclick="openProject(this, 'data-project-id')" >OpenProject</button>
-                                <button class="edit-button btn btn-primary" data-project-id=${project.id}>Edit</button>
-                                <button class="delete-button btn btn-danger" data-project-id=${project.id}>Delete</button>
+                                <button class=" btn btn-primary"  data-project-id=${project.id} onclick="openProject(this, 'data-project-id')" >Detalhar</button>
+                                <button class="edit-button btn btn-primary" data-project-id=${project.id}>Editar</button>
+                                <button class="delete-button btn btn-danger" data-project-id=${project.id}>Excluir</button>
                             </div>
                          </td>
                     `;

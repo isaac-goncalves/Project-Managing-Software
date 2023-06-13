@@ -23,16 +23,16 @@ require('session.php');
             <h1 class="card-header">Editar task</h1>
             <form action="./backend/editTask.php" method="post">
                 <div class="form-group">
-                    <label for="task_id">ID task:</label>
+                    <label for="task_id">TID:</label>
                     <input type="text" class="form-control" id="task_id" name="task_id" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label for="projectId">ID projeto:</label>
+                    <label for="projectId">PID:</label>
                     <input type="text" class="form-control" id="projectId" name="project_id" required>
                 </div>
                 <div class="form-group">
-                    <label for="taskName">Título:</label>
+                    <label for="taskName">Task:</label>
                     <input type="text" class="form-control" id="taskName" name="task_name" required>
                 </div>
                 <div class="form-group">
@@ -40,10 +40,10 @@ require('session.php');
                     <textarea class="form-control" id="taskDescription" name="task_description" required></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="completed">Status:</label>
+                    <label for="completed">Finalizado:</label>
                     <select class="form-control" id="completed" name="completed" required>
-                        <option value="true">Concluído</option>
-                        <option value="false">Pendente</option>
+                        <option value="true">Sim</option>
+                        <option value="false">Não</option>
                     </select>
                 </div>
                 <div class="form-group">

@@ -9,7 +9,7 @@ require('session.php');
     ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Registrar Projeto</title>
+    <title>Novo Projeto</title>
     
 </head>
 
@@ -54,7 +54,7 @@ require('session.php');
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="projLabel" for="user_id">ID do usuário</label>
+                        <label class="projLabel" for="user_id">UID</label>
                         <input value="<?php echo $_SESSION['user']['id']; ?>" type="text" class="form-control" placeholder="Readonly input here…" name="user_id" id="user_id" readonly>
                     </div>
                     <div class="modal-footer">

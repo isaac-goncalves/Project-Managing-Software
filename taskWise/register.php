@@ -40,7 +40,7 @@ if (isset($_GET['message'])) {
             <div class="card-body">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <h1 class="card-header text-center">Register</h1>
+                        <h1 class="card-header text-center">Registrar</h1>
                         <form action="./backend/registerUser.php" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="username" placeholder="Username">
