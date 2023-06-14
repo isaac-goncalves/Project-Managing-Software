@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $response = ['status' => 'success', 'message' => 'Project deleted successfully'];
         header('Content-Type: application/json');
         echo json_encode($response);
+        
     } else {
         // Return an error message as plain text
         header('Content-Type: text/plain');

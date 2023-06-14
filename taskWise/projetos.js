@@ -74,10 +74,12 @@ window.onload = function () {
                 .then(data => {
                     // Handle the response from the backend
                     console.log(data);
+                    location.reload();
                     // Refresh the page or update the UI as needed
                 })
                 .catch(error => {
                     // Handle any errors that occur during the request
+                    alert("Erro ao deletar projeto")
                     console.error('Error:', error);
                 });
         }

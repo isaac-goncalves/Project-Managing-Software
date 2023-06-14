@@ -13,9 +13,6 @@
           $username = $_SESSION['user']['username'];
           $id = $_SESSION['user']['id'];
           echo '
-                      <li class="nav-item">
-                      <a class="nav-link" href="dashboard.php">Dashboard</a>
-                    </li>
                     <li class="nav-item">
                       <a class="nav-link" href="projetos.php">Projetos</a>
                     </li>

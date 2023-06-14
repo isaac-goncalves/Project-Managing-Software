@@ -146,8 +146,10 @@ window.onload = function () {
                     <td>${task.task_description}</td>
                     <td>${task.created_at}</td>
                     <td>
-                    <button class=" btn btn-primary"  data-task-id=${task.id} onclick="openTaskEdit(this, 'data-task-id')" >Edit Tasks</button>
-                        <button class="delete-button btn btn-danger" data-task-id=${task.id}>Delete</button>
+                    <div style="display: flex">
+                    <button class=" btn btn-primary"  data-task-id=${task.id} onclick="openTaskEdit(this, 'data-task-id')" >Editar</button>
+                        <button class="delete-button btn btn-danger" data-task-id=${task.id}>Excluir</button>
+                    </div>
                     </td>
                     `;
                     tableBody.appendChild(row);
