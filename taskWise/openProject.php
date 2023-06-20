@@ -1,40 +1,23 @@
-<?php
-require('session.php');
-?>
-
 <html>
 
 <head>
-<title>Detalhar projeto</title>
-
+    <title>Detalhar projeto</title>
     <style>
         .table .btn {
             margin-right: 5px;
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xxxxx" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xxxxx" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <script type="text/javascript" src="./openProject.js"></script>
-    <!-- <link rel="stylesheet" href="styles/tasks.css"> -->
-
-    <script>
-        // $(document).ready(function() {
-        //     $('#myModal').modal();
-        // });
-    </script>
-
 </head>
 
 <body>
     <?php require_once('navbar.php'); ?>
     <?php
-
-    // if (isset($_GET['message'])) {
-    //     if ($_GET['message'] == "succes") {
-    //         echo '<div class="alert alert-success">$decryptedMessage</div>';
-    //     }
-    // }
 
     if (isset($_GET['message'])) {
         $decryptedMessage = urldecode($_GET['message']);
@@ -96,9 +79,6 @@ require('session.php');
                 </div>
             </div>
             <div class="card-body">
-                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Open Modal
-    </button> -->
                 <table class="table table-hover" id="projectTable">
                     <thead>
                         <tr>
@@ -117,7 +97,6 @@ require('session.php');
                     <button type="button" class="btn btn-secondary" onclick="window.location.href='./projetos.php'">Voltar</button>
                 </div>
             </div>
-            <!-- now button to add a new project -->
         </div>
     </div>
 </body>

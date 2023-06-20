@@ -1,19 +1,6 @@
 window.onload = function () {
 
-    const sessionParams = {
-
-    }
-
-    // function openProject(button, projectId) {
-    //     console.log('RODEI isaac e carol! botao de open project');
-    //     var projectId = button.getAttribute("data-project-id");
-
-    //     // Use the parameters in your logic
-    //     console.log("Parameter 1: " + projectId);
-
-    //     // Redirect to the openProject page with the project ID in the URL
-    //     window.location.href = "/openProject?id=" + projectId;
-    //   }
+    const sessionParams = {}
 
     function getParams() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -23,80 +10,10 @@ window.onload = function () {
         return sessionParams
     }
 
-    function setEventListenerEditButton() {
-
-        // setando event listener no botao de editar
-        console.log('RODEI isaac e carol! event listeneer');
-
-        const editButtons = document.getElementsByClassName('edit-button');
-
-        const editButtonsArray = Array.from(editButtons);
-
-        console.log(editButtonsArray);
-
-        editButtonsArray.forEach(button => {
-            button.addEventListener('click', function () {
-                console.log('RODEI isaac e carol! event listeneer');
-
-                const projectId = button.getAttribute('data-project-id');
-
-                // console.log(button.dataset.data-project-id);
-                window.location.href = `./editarTask.php?project_id=${projectId}`;
-            });
-        });
-
-    }
-
-    function setEventListenerDeleteButton() {
-        const deleteButtons = document.getElementsByClassName('delete-button');
-
-        // Convert the HTML collection to an array
-        const deleteButtonsArray = Array.from(deleteButtons);
-
-        // Add event listener to each delete button
-        deleteButtonsArray.forEach(button => {
-            button.addEventListener('click', function () {
-                // Retrieve the project ID from the data attribute
-                const projectId = button.dataset.projectId;
-
-                // Confirm deletion with the user
-                if (confirm('Are you sure you want to delete this project?')) {
-                    // Perform the delete operation
-                    deleteProject(projectId);
-                }
-            });
-        });
-
-        // Function to handle the delete operation
-        function deleteProject(projectId) {
-
-            const data = {
-                project_id: projectId
-            };
-
-            // Perform the delete request to your backend API
-            fetch(`./backend/deleteProject.php`, {
-                method: 'post',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // Handle the response from the backend
-                    console.log(data);
-                    // Refresh the page or update the UI as needed
-                })
-                .catch(error => {
-                    // Handle any errors that occur during the request
-                    console.error('Error:', error);
-                });
-        }
-    }
-
     async function startComponent() {
+
         const params = getParams()
+
         console.log(params)
 
         //funcção que faz o fetch dos dados do projeto 
@@ -104,16 +21,18 @@ window.onload = function () {
         const projectData = await fetch(`./backend/getProjects.php?project_id=${params.project_id}`).then(response => response.json())
 
         console.log("projectData")
+
         console.log(projectData)
 
         renderProjectDataOnPage(projectData)
 
         await populateTasksTable();
 
+        setEventListenerDeleteButton()
+
         console.log('RODEI isaac e carol! start component');
 
         // setEventListenerEditButton()
-        // setEventListenerDeleteButton()
     }
 
     startComponent()
@@ -147,8 +66,8 @@ window.onload = function () {
                     <td>${task.created_at}</td>
                     <td>
                     <div style="display: flex">
-                    <button class=" btn btn-primary"  data-task-id=${task.id} onclick="openTaskEdit(this, 'data-task-id')" >Editar</button>
-                        <button class="delete-button btn btn-danger" data-task-id=${task.id}>Excluir</button>
+                        <button class=" btn btn-primary"  data-task-id=${task.id} onclick="openTaskEdit(this, 'data-task-id')">Editar</button>
+                        <button class="delete-button btn btn-danger" taskid=${task.id}>Excluir</button>
                     </div>
                     </td>
                     `;
@@ -187,6 +106,55 @@ window.onload = function () {
         prioritylabel.innerHTML = projectData.priority;
         statusLabel.innerHTML = projectData.status;
 
+    }
+
+    function setEventListenerDeleteButton() {
+        console.log('delete-button Listeners')
+        const deleteButtons = document.getElementsByClassName('delete-button');
+
+        // Convert the HTML collection to an array
+        const deleteButtonsArray = Array.from(deleteButtons);
+
+        // Add event listener to each delete button
+        deleteButtonsArray.forEach(button => {
+            button.addEventListener('click', function () {
+                // Retrieve the project ID from the data attribute
+                const task_id = button.getAttribute('taskid');
+
+                console.log(task_id)
+
+                // Confirm deletion with the user
+                if (confirm('Are you sure you want to delete this task?')) {
+                    // Perform the delete operation
+                    deleteProject(task_id);
+                }
+            });
+        });
+    }
+
+    async function deleteProject(task_id) {
+        // Function to handle the delete operation
+
+        const data = {
+            task_id: task_id
+        };
+
+        // Perform the delete request to your backend API
+        await fetch(`./backend/deleteTask.php`, {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                alert('Task deleted successfully!')
+                location.reload();
+            })
+            .catch(error => {
+                // Handle any errors that occur during the request
+                console.error('Error:', error);
+            });
     }
 
 }
