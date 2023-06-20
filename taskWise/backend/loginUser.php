@@ -1,39 +1,54 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    error_log(print_r($_SERVER, true));
+    if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
+        header('HTTP/1.0 403 Forbidden');
+        echo json_encode(['message' => 'Authentication required.']);
+        exit();
+    } else {
+        $authHeader = explode(' ', $_SERVER['HTTP_AUTHORIZATION']);
+        if (count($authHeader) == 2 && $authHeader[0] == 'Basic') {
+            $credentials = base64_decode($authHeader[1]);
+            if ($credentials !== false) {
+                list($email, $password) = explode(':', $credentials, 2);
+            } else {
+                header('HTTP/1.0 401 Unauthorized');
+                echo json_encode(['message' => 'Invalid authorization header.']);
+                exit();
+            }
+        } else {
+            header('HTTP/1.0 401 Unauthorized');
+            echo json_encode(['message' => 'Invalid authorization header.']);
+            exit();
+        }
+    }
 
     require_once('./functions/loginFunctions.php');
     require_once './database/database.php';
 
-    error_log("Code Ran", 0);
-
     if (emptyInputLogin($email, $password) == false) {
-        header("location: ../index.php?error=emptyinput");
+        header('HTTP/1.0 400 Bad Request');
+        echo json_encode(['error' => 'emptyinput']);
         exit();
     }
 
     $user = loginUser($email, $password);
 
-    Error_log("Error: " . print_r($user, true));
-
     if ($user == false) {
-        header("location: ../index.php?error=stmtfailed");
-        error_log("Login Failed", 0);
+       
+        header('HTTP/1.0 401 Unauthorized');
+        echo json_encode(['error' => 'wronglogin']);
         exit();
     }
-    error_log("Login succeeded", 0);
-    //store on browser session
+
     session_start();
     $_SESSION['user'] = $user;
-    Error_log("Error: " . print_r($user, true));
-    Error_log("Session Data: " . print_r($_SESSION['user'], true));
-    header("location: ../projetos.php");
-    exit();
 
+    echo json_encode(['message' => 'Login succeeded', 'user' => $user]);
+    exit();
 } else {
-    header("location: ../register.php");
-    echo "error";
+    header('HTTP/1.0 405 Method Not Allowed');
+    echo json_encode(['message' => 'Invalid request method.']);
     exit();
 }

@@ -16,8 +16,9 @@ require_once('navbar.php');
 if (isset($_GET['error'])) {
     if ($_GET['error'] == "emptyinput") {
         echo '<div class="alert alert-danger">Fill in all fields!</div>';
-    } else if ($_GET['error'] == "stmtfailed") {
-        echo '<div class="alert alert-danger">Something went wrong, try again!</div>';
+    }
+    if ($_GET['error'] == "wronglogin") {
+        echo '<div class="alert alert-danger">Incorrect login information!</div>';
     }
 }
 
@@ -43,7 +44,7 @@ if (isset($_GET['message'])) {
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <h1 class="card-header text-center">Login</h1>
-                        <form action="./backend/loginUser.php" method="post">
+                        <form id="loginForm" action="./backend/loginUser.php" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="email" placeholder="Email">
                             </div>
@@ -60,5 +61,40 @@ if (isset($_GET['message'])) {
         <!-- Add the Bootstrap JS (optional, for certain components) -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('Form submitted!')
+        console.log(e);
+        var email = document.querySelector('input[name="email"]').value;
+        var password = document.querySelector('input[name="password"]').value;
+        var credentials = email + ':' + password;
+        var encodedCredentials = btoa(credentials);
+
+        fetch("http://localhost/backend/loginUser.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": "Basic " + encodedCredentials
+                },
+                body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+
+                console.log(data);
+
+                if (data.error) {
+                    window.location.href = window.location.pathname + '?error=' + data.error;
+                    return;
+                }
+
+                window.location.href = window.location.pathname + '?message=' + data.message;
+
+            })
+
+    });
+</script>
 
 </html>
